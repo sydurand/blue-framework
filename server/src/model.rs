@@ -1,6 +1,7 @@
 use serde::{Deserialize, Serialize};
 use chrono::{DateTime, Utc};
 use sqlx::FromRow;
+use uuid::Uuid;
 
 
 #[derive(Debug, Deserialize, Serialize, FromRow, Clone)]
@@ -11,7 +12,7 @@ pub struct Request {
 
 #[derive(Debug, Deserialize, Serialize, FromRow, Clone)]
 pub struct Agent {
-    pub id: String,
+    pub id: Uuid,
     pub implant: bool,
     pub created_at:DateTime<Utc>, 
     pub last_seen: Option<DateTime<Utc>>,

@@ -9,8 +9,3 @@ CREATE TABLE Agent(
     username TEXT NOT NULL,
     hostname TEXT NOT NULL
 );
-
-CREATE TABLE Request(
-    key1 INTERGER NOT NULL,
-    key2 INTERGER NOT NULL
-);
